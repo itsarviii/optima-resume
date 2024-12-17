@@ -13,24 +13,41 @@ export default function LandingHero() {
   }
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden bg-white">
-      <div className="flex-1 flex flex-col items-center justify-center px-6 text-center">
-        <h1 className="text-6xl font-black tracking-tight leading-[1.05] mb-5 text-gray-900 max-w-lg">
-          <span className="text-emerald-600">Optima.</span><br />The resume that<br />gets you hired.
+    <div className="h-screen overflow-hidden flex flex-col bg-white">
+
+      {/* Nav */}
+      <header className="shrink-0 border-b border-gray-100">
+        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center">
+          <span className="text-sm font-black tracking-tight">
+            Optima<span className="text-emerald-600">.</span>
+          </span>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <main className="flex-1 flex flex-col items-center justify-center px-6 text-center">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight leading-[1.05] mb-5 text-gray-900">
+          The resume that<br />
+          <span className="text-emerald-600">gets you hired.</span>
         </h1>
-        <p className="text-gray-400 text-base mb-10 max-w-xs leading-relaxed">
-          No account. No tracking.<br />Runs entirely in your browser.
+
+        <p className="text-gray-400 text-sm sm:text-base mb-10 max-w-xs leading-relaxed">
+          Build a beautiful resume in minutes.<br />Completely free.
         </p>
+
         <button
           onClick={handleStart}
-          className="w-full max-w-xs py-4 bg-emerald-600 text-white rounded-xl font-bold text-base hover:bg-emerald-700 transition-colors"
+          className="px-8 py-4 bg-emerald-600 text-white rounded-xl font-bold text-base hover:bg-emerald-700 active:scale-[0.98] transition-all"
         >
           Build my resume →
         </button>
-      </div>
-      <div className="px-10 pb-7 shrink-0 text-center">
+      </main>
+
+      {/* Footer */}
+      <footer className="shrink-0 pb-6 text-center">
         <p className="text-xs text-gray-300">ATS-safe · PDF · Free</p>
-      </div>
+      </footer>
+
     </div>
   )
 }
